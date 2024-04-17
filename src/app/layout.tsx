@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import { CSPostHogProvider } from "@/components/providers";
 import "./globals.css";
+import NavBar from "@/components/NavBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,12 @@ export default function RootLayout({
       <ClerkProvider>
         <CSPostHogProvider>
           <ThemeProvider>
-            <body className={inter.className}>{children}</body>
+            <body className={`${inter.className} dark`}>
+              <div className="grid grid-rows-[auto,1fr] h-screen">
+                <NavBar />
+                {children}
+              </div>
+            </body>
           </ThemeProvider>
         </CSPostHogProvider>
       </ClerkProvider>

@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "./ui/button";
 
-export function ModeToggle() {
+export function ToggleTheme() {
   const { setTheme } = useTheme();
 
   return (
