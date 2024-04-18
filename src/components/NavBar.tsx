@@ -6,6 +6,7 @@ import { Button } from "./ui/button";
 import { SignedIn, SignedOut, UserButton, SignInButton } from "@clerk/nextjs";
 import logo from "../assets/logo.png";
 import Link from "next/link";
+import SheetLoader from "./SheetLoader";
 
 const NavBar = () => {
   return (
@@ -14,6 +15,7 @@ const NavBar = () => {
         <Image src={logo} alt="logo" width={100} height={100} />
       </Link>
       <div className="flex gap-5 px-4 items-center">
+        <SheetLoader />
         <ToggleTheme />
         <div>
           <SignedOut>
