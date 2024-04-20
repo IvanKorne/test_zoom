@@ -24,12 +24,14 @@ const MeetingModal = ({
           {children}
           <Button
             className={
-              "bg-blue-600 focus-visible:ring-0 focus-visible:ring-offset-0"
+              "bg-blue-600 focus-visible:ring-0 focus-visible:ring-offset-0 text-white hover:bg-blue-700"
             }
             onClick={handleClick}
           >
-            {buttonIcon} &nbsp;
-            {buttonText || "Schedule Meeting"}
+            <div className="flex gap-2 items-center">
+              {buttonIcon} &nbsp;
+              {buttonText || "Schedule Meeting"}
+            </div>
           </Button>
         </div>
       </DialogContent>

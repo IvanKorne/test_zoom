@@ -1,4 +1,4 @@
-import { ChildrenProps } from "@/lib/data";
+import { ChildrenProps } from "@/lib/types";
 import React from "react";
 
 const ClerkLayout = ({ children }: ChildrenProps) => {
